@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-weight:  var(--main-font-weight, 400);
+  font-variation-settings:  var(--main-font-weight, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
   background-image: var(--bg-image);
@@ -150,10 +150,10 @@
 
 .label {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 25px;
   color: var(--accent-color, #000);
-  -webkit-text-stroke: 1px var(--color-label, #fff);
+  text-shadow: 1px 1px 1px var(--color-label, #fff);
   font-family: var(--accent-font, fantasy);
   font-weight: var(--main-font-weight, 400);
   font-size: 14px;
@@ -174,11 +174,6 @@
   .label {
     text-stroke: 1px var(--color-label, #fff);
   }
-}
-
-/* Фоллбэк на text-shadow, если оба свойства не поддерживаются */
-.label {
-  text-shadow: 1px 1px 1px var(--color-label, #fff);
 }
 
 .card-img {
