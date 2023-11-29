@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: var(--main-font-weight, 400);
+  font-weight:  var(--main-font-weight, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
   background-image: var(--bg-image);
@@ -162,6 +162,25 @@
   mix-blend-mode: hard-light;
 }
 
+/* Проверка поддержки -webkit-text-stroke */
+@supports (-webkit-text-stroke: 1px var(--color-label, #fff)) {
+  .label {
+    -webkit-text-stroke: 1px var(--color-label, #fff);
+  }
+}
+
+/* Проверка поддержки text-stroke */
+@supports (text-stroke: 1px var(--color-label, #fff)) or (-webkit-text-stroke: 1px var(--color-label, #fff)) {
+  .label {
+    text-stroke: 1px var(--color-label, #fff);
+  }
+}
+
+/* Фоллбэк на text-shadow, если оба свойства не поддерживаются */
+.label {
+  text-shadow: 1px 1px 1px var(--color-label, #fff);
+}
+
 .card-img {
   position: relative;
   display: block;
@@ -262,7 +281,7 @@
   height: 36px;
   fill: none;
 }
-/*Анимация сердечка*/
+/* Анимация сердечка */
 .like-icon:hover .core {
   fill: var(--contur-heart, #000);
   transition: fill 0.3s ease 0.03s;
@@ -345,7 +364,7 @@
   cursor: pointer;
 }
 
-/*Состояния кнопок*/
+/* Состояния кнопок */
 .btn-dialog:focus,
 .button-save:focus,
 .card__like-button:focus {
