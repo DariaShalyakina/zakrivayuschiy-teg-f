@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), sans-serif;
   font-weight: var(--main-font-weight, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
@@ -41,7 +41,7 @@
   align-items: center;
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   font-variation-settings:'wdth' var(--main-font-weight, 400);
   text-transform: uppercase;
 }
@@ -100,8 +100,9 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 6px;
+  top: 16px;
+  width: 85%;
   height: 2px;
   background-color: var(--accent-color, #000);
   transform-origin: left;
@@ -131,12 +132,12 @@
   margin-inline: auto;
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), sans-serif;
 }
 
 .card-title {
   color: var(--accent-color, #000);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: var(--title-font-weight, 700);
   margin: 3px 10px;
@@ -154,7 +155,7 @@
   right: 25px;
   color: var(--accent-color, #000);
   text-shadow: 1px 1px 1px var(--color-label, #fff);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   font-variation-settings:'wdth' var(--main-font-weight, 400);
   font-size: 14px;
   z-index: 1;
@@ -264,7 +265,7 @@
 
 .button__text {
   color: var(--btn-text, #fff);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   font-variation-settings:'wdth' var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 90%;
@@ -394,7 +395,7 @@
   transform: scaleX(1);
 }
 
-dialog[open] {
+#dialog-id[open] {
   padding: 30px;
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--accent-color, #000);
@@ -402,7 +403,7 @@ dialog[open] {
   height: 193px;
 }
 
-dialog::backdrop {
+#dialog-id::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -424,7 +425,7 @@ dialog::backdrop {
 
 .dialog-title {
   color: var(--accent-color, #000);
-  font-family: var(--accent-font, fantasy);
+  font-family: var(--accent-font), fantasy;
   font-variation-settings:'wdth' var(--main-font-weight, 400);
   font-size: 14px;
   line-height: 150%;
